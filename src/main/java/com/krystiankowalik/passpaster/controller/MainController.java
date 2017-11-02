@@ -1,26 +1,19 @@
 package com.krystiankowalik.passpaster.controller;
 
 import com.google.common.eventbus.Subscribe;
-import com.krystiankowalik.passpaster.EventBusProvider;
-import com.krystiankowalik.passpaster.HotKeyHandler;
+import com.krystiankowalik.passpaster.util.EventBusProvider;
+import com.krystiankowalik.passpaster.hotkey.HotKeyHandler;
 import com.krystiankowalik.passpaster.event.ApplicationStop;
 import com.krystiankowalik.passpaster.io.StreamFileHelper;
-import com.krystiankowalik.passpaster.model.Shortcut;
 import com.krystiankowalik.passpaster.parser.ShortcutParser;
-import com.sun.org.apache.xml.internal.utils.StringBufferPool;
-import javafx.beans.property.StringProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.File;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -51,7 +44,14 @@ public class MainController implements Initializable {
     }
 
     private List<String> getConfigFileContents() {
-        return streamFileHelper.readAllLines(Paths.get(getClass().getResource("/shortcuts.cfg").getFile()));
+        System.out.println();
+        String folderPath = null;
+        try {
+            folderPath = new File(getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParent();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        return streamFileHelper.readAllLines(Paths.get(folderPath + File.separator + "shortcuts.cfg"));
 
     }
 

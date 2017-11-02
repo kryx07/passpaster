@@ -1,4 +1,4 @@
-package com.krystiankowalik.passpaster;
+package com.krystiankowalik.passpaster.util;
 
 import java.awt.AWTException;
 import java.awt.Robot;

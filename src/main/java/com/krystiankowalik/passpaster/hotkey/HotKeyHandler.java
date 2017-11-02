@@ -1,7 +1,8 @@
-package com.krystiankowalik.passpaster;
+package com.krystiankowalik.passpaster.hotkey;
 
 import javax.swing.KeyStroke;
 
+import com.krystiankowalik.passpaster.util.ClipboardHelper;
 import com.krystiankowalik.passpaster.model.Shortcut;
 import com.tulskiy.keymaster.common.HotKey;
 import com.tulskiy.keymaster.common.HotKeyListener;

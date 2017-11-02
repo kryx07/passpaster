@@ -1,4 +1,4 @@
-package com.krystiankowalik.passpaster;
+package com.krystiankowalik.passpaster.util;
 
 import com.google.common.eventbus.EventBus;
 
