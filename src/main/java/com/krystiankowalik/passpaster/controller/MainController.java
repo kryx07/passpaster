@@ -51,7 +51,7 @@ public class MainController implements Initializable {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
-        return streamFileHelper.readAllLines(Paths.get(folderPath + File.separator + "shortcuts.cfg"));
+        return streamFileHelper.readAllLines(Paths.get(folderPath + File.separator + "config" + File.separator + "shortcuts.cfg"));
 
     }
 

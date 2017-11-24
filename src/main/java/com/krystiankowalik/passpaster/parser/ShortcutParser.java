@@ -29,4 +29,12 @@ public class ShortcutParser {
         shortcut.setCustomText(tokens[1]);
         return shortcut;
     }
+
+    public List<String> unParse(List<Shortcut> shortcuts) {
+        List<String> lines = new ArrayList<>();
+
+        shortcuts
+                .forEach(s -> lines.add(s.getKeyCombination() + "|" + s.getCustomText()));
+        return lines;
     }
+}

@@ -7,12 +7,15 @@ import com.krystiankowalik.passpaster.model.Shortcut;
 import com.tulskiy.keymaster.common.HotKey;
 import com.tulskiy.keymaster.common.HotKeyListener;
 import com.tulskiy.keymaster.common.Provider;
+import org.apache.log4j.Logger;
 
 import java.util.List;
 
 public class HotKeyHandler {
 
     private final String MY_CLIPBOARD = "DUPA";
+
+    private final Logger logger = Logger.getLogger(this.getClass());
 
     private ClipboardHelper clipboardHelper;
     private Provider provider;
@@ -44,8 +47,9 @@ public class HotKeyHandler {
         this.provider.register(KeyStroke.getKeyStroke("control shift alt Q"), new HotKeyListener() {
             @Override
             public void onHotKey(HotKey hotKey) {
-                System.out.println("Exiting...");
+                logger.info("Exiting");
                 stop();
+                System.exit(0);
             }
         });
     }
@@ -81,8 +85,12 @@ public class HotKeyHandler {
     public void stop() {
         this.provider.reset();
         this.provider.stop();
-        System.exit(0);
+        //System.exit(0);
 
+    }
+
+    public void reset() {
+        this.provider.reset();
     }
 
     @Override
