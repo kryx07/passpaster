@@ -40,6 +40,9 @@ public final class StreamFileHelper {
     }
 
     public void writeAllLines(List<String> lines, Path filePath) {
+        if (!Files.exists(filePath.getParent())) {
+            new File(filePath.getParent().toUri()).mkdirs();
+        }
         if (!Files.exists(filePath)) {
             logger.error("No such file " + filePath.toAbsolutePath().toString());
             createNewFile(filePath);

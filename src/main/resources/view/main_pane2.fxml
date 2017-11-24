@@ -26,7 +26,6 @@
                <children>
                   <ButtonBar prefHeight="40.0" prefWidth="200.0">
                     <buttons>
-                            <Button fx:id="tmpButton" mnemonicParsing="false" text="Button" />
                         <Button fx:id="addNewShortcut" mnemonicParsing="false" text="Add new shortcut" textAlignment="CENTER" wrapText="true" />
                         <Button fx:id="saveConfigButton" mnemonicParsing="false" text="Save Config" textAlignment="CENTER" wrapText="true" />
                         <Button fx:id="loadConfigButton" mnemonicParsing="false" text="Load Config" textAlignment="CENTER" wrapText="true" />

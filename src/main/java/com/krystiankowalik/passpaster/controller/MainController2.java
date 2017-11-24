@@ -37,8 +37,6 @@ public class MainController2 implements Initializable {
     @FXML
     private Button loadConfigButton;
     @FXML
-    private Button tmpButton;
-    @FXML
     private TableView<Shortcut> shortcutTableView;
 
     private TableColumn<Shortcut, String> keyCombinationColumn;
@@ -54,7 +52,6 @@ public class MainController2 implements Initializable {
     private void init() {
 
         hotKeyHandler = new HotKeyHandler();
-        tmpButton.setOnMouseClicked(event -> printTable());
         addNewShortcut.setOnMouseClicked(event -> {
             shortcutList.add(new Shortcut());
             shortcutTableView.getSelectionModel().clearAndSelect(shortcutTableView.getItems().size() - 1);
@@ -90,10 +87,10 @@ public class MainController2 implements Initializable {
         shortcutTableView.setItems(shortcutList);
         shortcutTableView.getColumns().setAll(keyCombinationColumn, customTextColumn);
     }
-
+/*
     public void printTable() {
         shortcutTableView.getItems().forEach(System.out::println);
-    }
+    }*/
 
 
     @Override
