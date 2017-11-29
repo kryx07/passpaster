@@ -1,4 +1,4 @@
-package com.krystiankowalik.passpaster.util;
+package com.github.kryx07.passpaster.util;
 
 import com.google.common.eventbus.EventBus;
 

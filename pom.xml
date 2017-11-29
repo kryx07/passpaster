@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.krystiankowalik</groupId>
+    <groupId>com.github.kryx07</groupId>
     <artifactId>passpaster</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -25,7 +25,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.krystiankowalik.passpaster.Main</mainClass>
+                            <mainClass>com.github.kryx07.passpaster.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -36,7 +36,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.krystiankowalik.passpaster.Main</mainClass>
+                            <mainClass>com.github.kryx07.passpaster.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

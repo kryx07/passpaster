@@ -1,7 +1,7 @@
-package com.krystiankowalik.passpaster;
+package com.github.kryx07.passpaster;
 
-import com.krystiankowalik.passpaster.event.ApplicationStop;
-import com.krystiankowalik.passpaster.util.EventBusProvider;
+import com.github.kryx07.passpaster.event.ApplicationStop;
+import com.github.kryx07.passpaster.util.EventBusProvider;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

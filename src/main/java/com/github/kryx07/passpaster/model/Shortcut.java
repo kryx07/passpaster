@@ -1,4 +1,4 @@
-package com.krystiankowalik.passpaster.model;
+package com.github.kryx07.passpaster.model;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

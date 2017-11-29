@@ -1,16 +1,15 @@
-package com.krystiankowalik.passpaster.controller;
+package com.github.kryx07.passpaster.controller;
 
+import com.github.kryx07.passpaster.event.ApplicationStop;
+import com.github.kryx07.passpaster.hotkey.HotKeyHandler;
+import com.github.kryx07.passpaster.io.StreamFileHelper;
+import com.github.kryx07.passpaster.model.Shortcut;
+import com.github.kryx07.passpaster.util.EventBusProvider;
+import com.github.kryx07.passpaster.util.LICENSE;
 import com.google.common.eventbus.Subscribe;
-import com.krystiankowalik.passpaster.event.ApplicationStop;
-import com.krystiankowalik.passpaster.hotkey.HotKeyHandler;
-import com.krystiankowalik.passpaster.io.StreamFileHelper;
-import com.krystiankowalik.passpaster.model.Shortcut;
-import com.krystiankowalik.passpaster.parser.ShortcutParser;
-import com.krystiankowalik.passpaster.util.EventBusProvider;
-import com.krystiankowalik.passpaster.util.LICENSE;
+import com.github.kryx07.passpaster.parser.ShortcutParser;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;

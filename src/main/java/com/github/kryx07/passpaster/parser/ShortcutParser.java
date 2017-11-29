@@ -1,11 +1,7 @@
-package com.krystiankowalik.passpaster.parser;
+package com.github.kryx07.passpaster.parser;
 
-import com.krystiankowalik.passpaster.Main;
-import com.krystiankowalik.passpaster.io.StreamFileHelper;
-import com.krystiankowalik.passpaster.model.Shortcut;
+import com.github.kryx07.passpaster.model.Shortcut;
 
-import java.net.URISyntaxException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 

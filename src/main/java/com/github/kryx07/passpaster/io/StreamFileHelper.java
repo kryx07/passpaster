@@ -1,4 +1,4 @@
-package com.krystiankowalik.passpaster.io;
+package com.github.kryx07.passpaster.io;
 
 import javafx.collections.FXCollections;
 import org.apache.log4j.Logger;
