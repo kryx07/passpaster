@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
 
 public class Main extends Application {
@@ -24,7 +23,7 @@ public class Main extends Application {
     private void showScene(Stage primaryStage) {
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("/view/main_pane2.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/view/main_pane.fxml"));
             primaryStage.setTitle("Pass paster");
             primaryStage.setScene(new Scene(root, 600, 600));
             primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("/images/icon.png")));
