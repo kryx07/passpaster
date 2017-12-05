@@ -3,8 +3,6 @@ package com.github.kryx07.passpaster.controller;
 import com.github.kryx07.passpaster.event.ApplicationStop;
 import com.github.kryx07.passpaster.hotkey.HotKeyHandler;
 import com.github.kryx07.passpaster.io.StreamFileHelper;
-import com.github.kryx07.passpaster.model.PasswordFieldCell;
-import com.github.kryx07.passpaster.model.PasswordLabelCell;
 import com.github.kryx07.passpaster.model.Shortcut;
 import com.github.kryx07.passpaster.util.EventBusProvider;
 import com.github.kryx07.passpaster.util.LICENSE;
@@ -32,8 +30,6 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
-    @FXML
-    private Button toggleTextVisibilityButton;
     @FXML
     private Button addNewShortcut;
     @FXML
@@ -64,13 +60,6 @@ public class MainController implements Initializable {
         });
         loadConfigButton.setOnMouseClicked(event -> loadConfig());
         saveConfigButton.setOnMouseClicked(event -> saveConfig());
-        /*toggleTextVisibilityButton.setOnMouseClicked(event -> {
-
-            for (int i = 0; i < shortcutList.size(); ++i) {
-                //customTextColumn.getTableView().getItems().get(i)
-                customTextColumn.
-            }
-        });*/
 
         aboutButton.setOnMouseClicked(event -> displayAboutPopup());
 
@@ -128,10 +117,6 @@ public class MainController implements Initializable {
         shortcutTableView.setItems(shortcutList);
         shortcutTableView.getColumns().setAll(keyCombinationColumn, customTextColumn);
     }
-/*
-    public void printTable() {
-        shortcutTableView.getItems().forEach(System.out::println);
-    }*/
 
 
     @Override
