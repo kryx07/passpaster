@@ -30,6 +30,7 @@
                         <Button fx:id="addNewShortcut" mnemonicParsing="false" text="Add new shortcut" textAlignment="CENTER" wrapText="true" />
                         <Button fx:id="saveConfigButton" mnemonicParsing="false" text="Save Config" textAlignment="CENTER" wrapText="true" />
                         <Button fx:id="loadConfigButton" mnemonicParsing="false" text="Load Config" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="toggleTextVisibilityButton" mnemonicParsing="false" text="Show / Hide Text" textAlignment="CENTER" wrapText="true" />
                     </buttons>
                   </ButtonBar>
                </children>

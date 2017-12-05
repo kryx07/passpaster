@@ -3,6 +3,8 @@ package com.github.kryx07.passpaster.controller;
 import com.github.kryx07.passpaster.event.ApplicationStop;
 import com.github.kryx07.passpaster.hotkey.HotKeyHandler;
 import com.github.kryx07.passpaster.io.StreamFileHelper;
+import com.github.kryx07.passpaster.model.PasswordFieldCell;
+import com.github.kryx07.passpaster.model.PasswordLabelCell;
 import com.github.kryx07.passpaster.model.Shortcut;
 import com.github.kryx07.passpaster.util.EventBusProvider;
 import com.github.kryx07.passpaster.util.LICENSE;
@@ -30,6 +32,8 @@ import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
+    @FXML
+    private Button toggleTextVisibilityButton;
     @FXML
     private Button addNewShortcut;
     @FXML
@@ -60,6 +64,14 @@ public class MainController implements Initializable {
         });
         loadConfigButton.setOnMouseClicked(event -> loadConfig());
         saveConfigButton.setOnMouseClicked(event -> saveConfig());
+        /*toggleTextVisibilityButton.setOnMouseClicked(event -> {
+
+            for (int i = 0; i < shortcutList.size(); ++i) {
+                //customTextColumn.getTableView().getItems().get(i)
+                customTextColumn.
+            }
+        });*/
+
         aboutButton.setOnMouseClicked(event -> displayAboutPopup());
 
         streamFileHelper = new StreamFileHelper();
@@ -95,9 +107,15 @@ public class MainController implements Initializable {
         keyCombinationColumn = new TableColumn<>("Key Combination");
         customTextColumn = new TableColumn<>("Password");
 
-        keyCombinationColumn.setCellValueFactory(param -> param.getValue().keyCombinationProperty());
+
         keyCombinationColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        customTextColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+//        customTextColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        customTextColumn.setCellFactory(cf -> new PasswordLabelCell()
+        );
+
+        keyCombinationColumn.setCellValueFactory(param -> param.getValue().keyCombinationProperty());
+        //customTextColumn.setCellFactory((TableColumn<Shortcut, String> param) -> new PasswordFieldCell());
+
         customTextColumn.setCellValueFactory(param -> param.getValue().customTextProperty());
 
         shortcutTableView.setEditable(true);
